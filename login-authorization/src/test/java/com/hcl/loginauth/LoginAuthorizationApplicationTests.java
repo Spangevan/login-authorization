@@ -20,6 +20,14 @@ class LoginAuthorizationApplicationTests {
 
 	@Autowired
 	private MvcConfig mvcConfig;
+	
+	@Autowired
+	private WebSecurityConfig webSecurityConfig;
+	
+	@Test
+	public void otherContextLoads() throws Exception {
+		assertThat(webSecurityConfig).isNotNull();
+	}
 
 	@Test
 	public void contextLoads() throws Exception {
